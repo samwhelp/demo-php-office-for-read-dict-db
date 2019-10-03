@@ -30,6 +30,8 @@ $ cd demo-php-office-for-read-dict-db
 $ composer install
 ```
 
+> 關於「[composer](https://getcomposer.org/)」的安裝，請參考另一個專案的「[說明](https://github.com/samwhelp/demo-php-office/tree/master/demo-install-composer/ex-install-composer)」。
+
 ### 下載字典的原始資料
 
 執行下面指令，
