@@ -1,0 +1,32 @@
+{
+    "name": "dev/dict",
+    "description": "Demo App",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dev",
+            "email": "dev@home.heaven"
+        }
+    ],
+    "config": {
+        "vendor-dir": "lib/vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dict\\": "src/Dict/",
+            "Main\\": "src/Main/"
+        }
+    },
+    "scripts": {
+        "dict": "./bin/dict",
+        "usage": "./bin/help.sh"
+    },
+    "bin": [
+        "bin/dict"
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.9",
+        "php": ">=7.1.0"
+    }
+}
