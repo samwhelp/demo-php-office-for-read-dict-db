@@ -149,3 +149,12 @@ $ make dict-concised-link-list | wc
 ```
 1347    1347   47133
 ```
+
+
+## PHPOffice 相關專案
+
+* [demo-php-office](https://github.com/samwhelp/demo-php-office)
+
+## PHPOffice 相關討論
+
+* [關於「PHPOffice」的使用範例](https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=361316#forumpost361316)
