@@ -153,6 +153,19 @@ $ make dict-concised-link-list | wc
 ```
 
 
+### 成語接龍結果儲存
+
+#### 儲存成ods
+
+執行下面指令
+
+``` sh
+$ make dict-concised-link-list-save-as-ods
+```
+
+就會產生一個檔案「var/result/link-result.ods」。
+
+
 ## PHPOffice 相關專案
 
 * [demo-php-office](https://github.com/samwhelp/demo-php-office)

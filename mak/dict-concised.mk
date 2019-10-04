@@ -17,3 +17,8 @@ dict-concised-db-save-link:
 dict-concised-link-list:
 	@dict-concised-link-list.php
 .PHONY: dict-concised-link-list
+
+
+dict-concised-link-list-save-as-ods:
+	@dict-concised-link-list-save-as-ods.php
+.PHONY: dict-concised-link-list-save-as-ods

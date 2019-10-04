@@ -39,8 +39,9 @@ Example:
 	$ make dict-concised-db-save
 	$ make dict-concised-db-save-four
 	$ make dict-concised-db-save-link
-	$ make dict-concised-link-list
 
+	$ make dict-concised-link-list
+	$ make dict-concised-link-list-save-as-ods
 
 Debug:
 	$ export DEBUG_TOOL=true

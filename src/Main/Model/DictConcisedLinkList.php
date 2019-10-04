@@ -4,7 +4,14 @@ namespace Main\Model;
 
 class DictConcisedLinkList {
 
-	protected $_Data = array();
+	protected $_SourceData = array();
+
+
+	protected $_TargetData = array();
+	public function getTargetData () {
+		return $this->_TargetData;
+	}
+
 
 	public function run () {
 
@@ -17,26 +24,27 @@ class DictConcisedLinkList {
 		;
 
 
-		$this->_Data = $loader->getData();
+		$this->_SourceData = $loader->getData();
 
 
 
-		foreach ($this->_Data as $main => $relation) {
+		foreach ($this->_SourceData as $main => $relation) {
 			$pass = $this->createMetaData_ByMain($main);
 			$this->walkMetaData($pass);
 		}
 
 
+		return $this;
 
 	}
 
 
 	public function findLinkList_ByMain ($main) {
-		if (!array_key_exists($main, $this->_Data)) {
+		if (!array_key_exists($main, $this->_SourceData)) {
 			return array();
 		}
 
-		return $this->_Data[$main];
+		return $this->_SourceData[$main];
 
 	}
 
@@ -95,7 +103,8 @@ class DictConcisedLinkList {
 				//var_dump($node);
 				//var_dump($atom);
 				//var_dump($atom['path']);
-				echo($this->createPath($atom['path']) . PHP_EOL);
+				//echo($this->createPath($atom['path']) . PHP_EOL);
+				$this->_TargetData[] = $atom['path'];
 				continue;
 			}
 
@@ -111,6 +120,8 @@ class DictConcisedLinkList {
 		foreach ($list as $val) {
 			$rtn .= '/' . $val;
 		}
+
+		$rtn = ltrim($rtn, '/');
 
 		return $rtn;
 	}
