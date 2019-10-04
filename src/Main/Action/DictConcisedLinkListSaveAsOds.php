@@ -6,7 +6,7 @@ class DictConcisedLinkListSaveAsOds {
 
 	public function run () {
 
-		// ## 產生成語接龍的各種組合結果
+		// ## 產生成語接龍的各種排列組合結果
 		$model = (new \Main\Model\DictConcisedLinkList)
 			->run()
 		;
