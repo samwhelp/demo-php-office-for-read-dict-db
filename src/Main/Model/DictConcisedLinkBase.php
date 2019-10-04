@@ -2,9 +2,16 @@
 
 namespace Main\Model;
 
-class DictConcisedDbSaveLink {
+class DictConcisedLinkBase {
 
-	protected $_Data = array();
+	protected $_SourceData = array();
+
+
+	protected $_TargetData = array();
+	public function getTargetData () {
+		return $this->_TargetData;
+	}
+
 
 	public function run () {
 
@@ -18,11 +25,11 @@ class DictConcisedDbSaveLink {
 
 
 		// ## 產生對照表
-		$this->_Data = $loader->getData();
+		$this->_SourceData = $loader->getData();
 
 		$list = array();
 
-		foreach ($this->_Data as $item) {
+		foreach ($this->_SourceData as $item) {
 
 			//var_dump($item);
 
@@ -45,23 +52,15 @@ class DictConcisedDbSaveLink {
 
 		}
 
-		//var_dump($list);
+		$this->_TargetData = $list;
 
-		// ## 儲存資料
-		$db_file_path = THE_CLI_VAR_DIR_PATH . '/db/DictConcised-Link.txt';
-
-		$serialize = (new \Dict\SerializeData\PhpSerialize\DataSave)
-			->setTargetFilePath($db_file_path)
-			->setData($list)
-			->run()
-		;
-
+		return $this;
 	}
 
 	public function findTargetList_ByFirstTwo ($val) {
 		$list = array();
 
-		foreach ($this->_Data as $item) {
+		foreach ($this->_SourceData as $item) {
 			$content = $item['B'];
 
 			//$size = mb_strlen($content, 'UTF-8');
@@ -87,7 +86,7 @@ class DictConcisedDbSaveLink {
 	public function findTargetList_ByLastTwo ($val) {
 		$list = array();
 
-		foreach ($this->_Data as $item) {
+		foreach ($this->_SourceData as $item) {
 			$content = $item['B'];
 
 			//$size = mb_strlen($content, 'UTF-8');

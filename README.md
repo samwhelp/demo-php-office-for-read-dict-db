@@ -149,7 +149,7 @@ $ make dict-concised-link-list | wc
 顯示
 
 ```
-1347    1347   45786
+   1347    1347   45786
 ```
 
 
