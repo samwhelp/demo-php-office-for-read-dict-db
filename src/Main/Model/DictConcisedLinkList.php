@@ -95,9 +95,8 @@ class DictConcisedLinkList {
 	}
 
 
-	public function walkMetaData(&$node)
+	public function walkMetaData($node)
 	{
-
 		foreach ($node as $key => $atom) {
 			if (empty($atom['sub'])) {
 				//var_dump($node);

@@ -87,7 +87,7 @@ class DictConcisedLinkList {
 	}
 
 
-	public function walkMetaData(&$node)
+	public function walkMetaData($node)
 	{
 
 		foreach ($node as $key => $atom) {
