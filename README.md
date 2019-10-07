@@ -45,7 +45,7 @@ $  sudo apt-get install php-mbstring
 ```
 
 > 過程中會用到「[mb_strlen](https://www.php.net/manual/en/function.mb-strlen.php)」和「[mb_substr](https://www.php.net/manual/en/function.mb-substr.php)」。
-> 可以觀看「[src/Main/Model/DictConcisedLinkBase.php](DictConcisedLinkBase.php)」這個檔案。
+> 可以觀看「[src/Main/Model/DictConcisedLinkBase.php](src/Main/Model/DictConcisedLinkBase.php#L39)」這個檔案。
 
 
 ### 安裝相依的lib
