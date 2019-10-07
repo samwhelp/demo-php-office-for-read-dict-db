@@ -6,6 +6,12 @@
 
 這個專案是要用來回覆「[使用LibreOffice Calc來編輯中文詞彙接龍的可能性？](https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=361772#forumpost361772)」所寫的範例。
 
+
+## 相關筆記
+
+* [成語接龍開發筆記](https://samwhelp.github.io/note-php-office-for-read-dict-db/) ([GitHub](https://github.com/samwhelp/note-php-office-for-read-dict-db))
+
+
 ## clone
 
 執行下面指令
@@ -21,6 +27,26 @@ $ cd demo-php-office-for-read-dict-db
 ```
 
 ## 前置作業
+
+### 安裝 php-cli
+
+執行下面指令，安裝「[php-cli](https://packages.ubuntu.com/bionic/php-cli)」。
+
+``` sh
+$ sudo apt-get install php-cli
+```
+
+### 安裝 php-mbstring
+
+執行下面指令，安裝「[php-mbstring](https://packages.ubuntu.com/bionic/php-mbstring)」。
+
+``` sh
+$  sudo apt-get install php-mbstring
+```
+
+> 過程中會用到「[mb_strlen](https://www.php.net/manual/en/function.mb-strlen.php)」和「[mb_substr](https://www.php.net/manual/en/function.mb-substr.php)」。
+> 可以觀看「[src/Main/Model/DictConcisedLinkBase.php](DictConcisedLinkBase.php)」這個檔案。
+
 
 ### 安裝相依的lib
 
