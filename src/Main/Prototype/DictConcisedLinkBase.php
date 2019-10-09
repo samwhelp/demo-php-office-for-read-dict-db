@@ -2,7 +2,7 @@
 
 namespace Main\Prototype;
 
-class DictConcisedDbSaveLink {
+class DictConcisedLinkBase {
 
 	protected $_Data = array();
 
