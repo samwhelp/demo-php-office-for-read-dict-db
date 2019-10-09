@@ -3,6 +3,6 @@
 
 	require_once(dirname(__DIR__) . '/app/boot/start.php');
 
-	(new \Main\Model\DictConcisedDbSaveFour)
+	(new \Main\Action\DictConcisedDbSaveFour)
 		->run()
 	;

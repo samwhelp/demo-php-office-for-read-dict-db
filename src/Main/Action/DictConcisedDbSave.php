@@ -1,6 +1,6 @@
 <?php
 
-namespace Main\Model;
+namespace Main\Action;
 
 class DictConcisedDbSave {
 
