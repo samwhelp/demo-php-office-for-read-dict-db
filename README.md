@@ -104,7 +104,7 @@ $ make dict-concised-db-save-four
 執行下面指令
 
 ``` sh
-$ make dict-concised-db-save-link
+$ make dict-concised-link-base
 ```
 
 會產生一個檔案「var/db/DictConcised-Link.txt」，格式是「[php serialize](https://www.php.net/manual/en/function.serialize.php)」過後的內容。

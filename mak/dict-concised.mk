@@ -9,9 +9,9 @@ dict-concised-db-save-four:
 .PHONY: dict-concised-db-save-four
 
 
-dict-concised-db-save-link:
-	@dict-concised-db-save-link.php
-.PHONY: dict-concised-db-save-link
+dict-concised-link-base:
+	@dict-concised-link-base.php
+.PHONY: dict-concised-link-base
 
 
 dict-concised-link-list:

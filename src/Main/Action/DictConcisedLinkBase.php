@@ -2,7 +2,7 @@
 
 namespace Main\Action;
 
-class DictConcisedDbSaveLink {
+class DictConcisedLinkBase {
 
 	public function run () {
 
